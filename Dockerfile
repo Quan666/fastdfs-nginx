@@ -1,6 +1,7 @@
 ## Dockerfile
 FROM centos:7
-
+RUN echo "nameserver 144.144.144.144" >> /etc/resolv.conf
+RUN yum -y update
 LABEL maintainer "29ygq@sina.com"
 
 ENV FASTDFS_PATH=/opt/fdfs \
